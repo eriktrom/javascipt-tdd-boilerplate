@@ -1,5 +1,5 @@
 require.config({
-  // deps: ['main'],
+  deps: ['main'],
   paths: {
     'lodash': '/base/bower_components/lodash/dist/lodash',
   },
@@ -9,4 +9,3 @@ require.config({
     }
   }
 });
-ß

@@ -1,4 +1,4 @@
 // require.config({
-//   baseUrl: '/base/js',
+//   baseUrl: '../../js',
 //   deps: ['/base/requirejs-config.js']
 // });
