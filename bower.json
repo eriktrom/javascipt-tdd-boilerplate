@@ -1,0 +1,19 @@
+{
+  "name": "tdd-js",
+  "version": "0.0.0",
+  "authors": [
+    "Erik Trom <erik.trom@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "~2.4.1"
+  }
+}

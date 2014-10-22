@@ -1,0 +1,23 @@
+{
+  "name": "karma-requirejs-boilerplate",
+  "version": "1.0.0",
+  "description": "Karma test setup for BDD/TDD testing",
+  "scripts": {
+    "test": "./node node_modules/karma/bin/karma start"
+  },
+  "author": "Erik Trom",
+  "license": "MIT",
+  "devDependencies": {
+    "karma": "^0.12.24",
+    "karma-chrome-launcher": "^0.1.5",
+    "karma-coverage": "^0.2.6",
+    "karma-growl-reporter": "^0.1.1",
+    "karma-qunit": "^0.1.4",
+    "karma-requirejs": "^0.2.2",
+    "qunitjs": "^1.15.0",
+    "requirejs": "^2.1.15"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
