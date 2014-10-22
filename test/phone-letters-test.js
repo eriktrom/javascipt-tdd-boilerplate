@@ -1,12 +1,8 @@
-define(['lodash'], function (_) {
+define(['lodash', 'pp'], function (_, pp) {
 
-  module("Module Name");
+  module("Phone Letters");
 
   test("calculates the english words possible by hitting 2265", function() {
-
-    function pp(input) {
-      return JSON.stringify(input);
-    };
 
     var key2 = ["a", "b", "c"];
     var key6 = ["m", "n", "o"];

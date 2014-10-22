@@ -1,6 +1,6 @@
 define(['fizz-buzz'], function (fizzBuzz) {
 
-  module("Fizz Buzz Test");
+  module("Fizz Buzz");
 
   test('prints "Fizz" for multiples of 3, "Buzz" for 5 and "FizzBuzz" for multiples of 3 or 5', function () {
     var expected = [
