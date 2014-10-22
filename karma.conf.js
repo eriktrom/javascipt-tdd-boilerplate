@@ -15,11 +15,11 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      {pattern: 'app/**/*.{js,coffee}', included: false},
       {pattern: 'bower_components/**/*.js', included: false},
-      {pattern: 'test/**/*-test.{js,coffee}', included: false},
+      {pattern: 'src/main.js', included: false},
+      {pattern: 'src/**/*.{js,coffee}', included: false},
       {pattern: 'test/main.js', included: false},
-      {pattern: 'app/main.js', included: false},
+      {pattern: 'test/**/*-test.{js,coffee}', included: false},
       {pattern: 'requirejs-config.js', included: false},
       'test/main.karma.js'
     ],
@@ -35,24 +35,24 @@ module.exports = function(config) {
     // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
     reporters: [
       'dots',
-      // 'coverage',
+      'coverage',
       // enable growl support via: karma-growl-reporter --save-dev
       // and uncommenting the line below
       'growl'
     ],
 
-    // preprocessors: {
-    //   // source files, that you wanna generate coverage for
-    //   // do not include tests or libraries
-    //   // (these files will be instrumented by Istanbul)
-    //   'js/**/*.{js}': ['coverage']
-    // },
+    preprocessors: {
+      // source files, that you wanna generate coverage for
+      // do not include tests or libraries
+      // (these files will be instrumented by Istanbul)
+      'js/**/*.{js}': ['coverage']
+    },
 
-    // // optionally, configure the reporter
-    // coverageReporter: {
-    //   type : 'html',
-    //   dir : 'coverage/'
-    // },
+    // optionally, configure the reporter
+    coverageReporter: {
+      type : 'html',
+      dir : 'coverage/'
+    },
 
 
     // web server port

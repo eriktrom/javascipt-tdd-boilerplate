@@ -1,4 +1,4 @@
 require.config({
-  baseUrl: '/base/app',
+  baseUrl: '/base/src',
   deps: ['/base/requirejs-config.js']
 });

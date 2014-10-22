@@ -1,6 +1,20 @@
 var allTestFiles = [];
 var TEST_REGEXP = /(spec|test)\.js$/i;
 
+// removes the /base/ prefix, might be very handy, see notes inside main.karma.js
+// var pathToModule = function(path) {
+//   return path.replace(/^\/base\//, '').replace(/\.js$/, '');
+// };
+
+Object.keys(window.__karma__.files).forEach(function(file) {
+  if (TEST_REGEXP.test(file)) {
+    // Normalize paths to RequireJS module names.
+    // allTestFiles.push(pathToModule(file));
+    allTestFiles.push(file); // don't normalize for now though
+  }
+});
+
+
 Object.keys(window.__karma__.files).forEach(function(file) {
   if (TEST_REGEXP.test(file)) {
     // Normalize paths to RequireJS module names.
@@ -10,7 +24,7 @@ Object.keys(window.__karma__.files).forEach(function(file) {
 
 require.config({
   // Karma serves files under /base, which is the basePath from your config file
-  baseUrl: '/base/app',
+  baseUrl: '/base/src',
 
   // dynamically load all test files
   deps: allTestFiles,
