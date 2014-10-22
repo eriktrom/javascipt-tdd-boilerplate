@@ -15,11 +15,11 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      {pattern: 'js/**/*.{js,coffee}', included: false},
+      {pattern: 'app/**/*.{js,coffee}', included: false},
       {pattern: 'bower_components/**/*.js', included: false},
       {pattern: 'test/**/*-test.{js,coffee}', included: false},
       {pattern: 'test/main.js', included: false},
-      {pattern: 'js/main.js', included: false},
+      {pattern: 'app/main.js', included: false},
       {pattern: 'requirejs-config.js', included: false},
       'test/main.karma.js'
     ],

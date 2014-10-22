@@ -1,4 +1,4 @@
-define(['lodash'], function (_) {
+define(['fizz-buzz'], function (fizzBuzz) {
 
   module("Fizz Buzz Test");
 
@@ -106,19 +106,7 @@ define(['lodash'], function (_) {
       "Buzz"
     ].join("\n");
 
-
-    var actual = _.chain(_.range(1, 101))
-      .reduce(function (memo, num) {
-        if (num % 3 === 0 && num % 5 === 0) memo.push("FizzBuzz");
-        else if (num % 3 === 0) memo.push("Fizz");
-        else if (num % 5 === 0) memo.push("Buzz");
-        else memo.push(num);
-
-        return memo;
-      }, []).join("\n")
-      .value();
-
-    equal(actual, expected);
+    equal(fizzBuzz, expected);
   });
 
 });
