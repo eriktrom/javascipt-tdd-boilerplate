@@ -2,10 +2,12 @@ define(['lodash'], function (_) {
 
   return _.chain(_.range(1, 101))
     .reduce(function (memo, num) {
-      if (num % 3 === 0 && num % 5 === 0) memo.push("FizzBuzz");
-      else if (num % 3 === 0) memo.push("Fizz");
-      else if (num % 5 === 0) memo.push("Buzz");
-      else memo.push(num);
+      var word = "";
+
+      if (num % 3 === 0) word += "Fizz";
+      if (num % 5 === 0) word +=("Buzz");
+
+      memo.push(word || num);
 
       return memo;
     }, [])
